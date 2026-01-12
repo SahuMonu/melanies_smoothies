@@ -21,7 +21,7 @@ st.dataframe(data=my_dataframe, use_container_width=True)
 
 # Convert the Snowpark dataframe to pandas dataframe so that we can use LOC function
 pd_df=my_dataframe.to_pandas()
-st.dataframe(pd_df)
+#st.dataframe(pd_df)
 #st.stop()
 
 
@@ -37,7 +37,7 @@ if ingredients_list:
 
         st.subheader(fruit_chosen+'Nutrition Information')
         # st.write(ingredients_string)
-        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+fruit_chosen)
+        fruityvice_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+fruit_chosen)
         st_df=st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
 
     time_to_insert=st.button('Submit order')
