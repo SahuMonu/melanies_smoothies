@@ -20,7 +20,7 @@ st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
 
 # Convert the Snowpark dataframe to pandas dataframe so that we can use LOC function
-pd_df=my_dataframe.to_pandas
+pd_df=my_dataframe.to_pandas()
 st.dataframe(pd_df)
 #st.stop()
 
