@@ -17,7 +17,7 @@ cnx=st.connection("snowflake")
 session=cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 st.dataframe(data=my_dataframe, use_container_width=True)
-st.stop()
+#st.stop()
 
 # Convert the Snowpark dataframe to pandas dataframe so that we can use LOC function
 pd_df=my_dataframe.to_pandas
